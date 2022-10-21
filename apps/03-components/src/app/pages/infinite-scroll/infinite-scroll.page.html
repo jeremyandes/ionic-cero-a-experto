@@ -1,0 +1,14 @@
+<app-header title="Infinite Scroll" [hasBackButton]="true" titleColor="vimeo"></app-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of data; let i = index;">
+      <ion-label>Item {{ i + 1 }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll #infScroll threshold="100px" (ionInfinite)="loadData()" [disabled]="data.length < 20">
+    <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="Loading, please wait...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

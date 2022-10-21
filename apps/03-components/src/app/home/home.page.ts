@@ -57,6 +57,11 @@ export class HomePage implements OnInit {
       title: 'Grid System',
       routerLink: '/grid',
     },
+    {
+      icon: 'infinite-outline',
+      title: 'Infinite Scroll',
+      routerLink: '/infinite-scroll',
+    },
   ]
 
   constructor() { }
