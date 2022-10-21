@@ -67,6 +67,11 @@ export class HomePage implements OnInit {
       title: 'Input Forms',
       routerLink: '/inputs',
     },
+    {
+      icon: 'list-outline',
+      title: 'List',
+      routerLink: '/list',
+    },
   ]
 
   constructor() { }
