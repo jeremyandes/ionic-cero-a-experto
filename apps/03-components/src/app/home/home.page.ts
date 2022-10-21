@@ -47,6 +47,11 @@ export class HomePage implements OnInit {
       title: 'DateTime',
       routerLink: '/date-time',
     },
+    {
+      icon: 'car-outline',
+      title: 'Fab',
+      routerLink: '/fab',
+    },
   ]
 
   constructor() { }
