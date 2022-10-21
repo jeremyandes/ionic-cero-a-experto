@@ -27,6 +27,11 @@ export class HomePage implements OnInit {
       title: 'Avatar',
       routerLink: '/avatar',
     },
+    {
+      icon: 'radio-button-off-outline',
+      title: 'Buttons',
+      routerLink: '/buttons',
+    },
   ]
 
   constructor() { }
