@@ -1,0 +1,21 @@
+<app-header [title]="getControlValue('name') || 'Input Forms'" [hasBackButton]="true" titleColor="youtube"></app-header>
+
+<ion-content>
+  <ion-list>
+    <form [formGroup]="form">
+      <ion-list-header>
+        <ion-label>Input Normal</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Name</ion-label>
+        <ion-input formControlName="name" type="text" placeholder="Write your name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Last Name</ion-label>
+        <ion-input formControlName="lastName" type="text" placeholder="Write your name"></ion-input>
+      </ion-item>
+    </form>
+  </ion-list>
+</ion-content>

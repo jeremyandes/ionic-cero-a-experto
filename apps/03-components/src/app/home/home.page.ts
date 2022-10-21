@@ -62,6 +62,11 @@ export class HomePage implements OnInit {
       title: 'Infinite Scroll',
       routerLink: '/infinite-scroll',
     },
+    {
+      icon: 'hammer-outline',
+      title: 'Input Forms',
+      routerLink: '/inputs',
+    },
   ]
 
   constructor() { }
