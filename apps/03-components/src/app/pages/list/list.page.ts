@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonList } from '@ionic/angular';
 import { JsonPlaceholderService } from '../../services/json-placeholder.service';
 
 @Component({
@@ -7,6 +8,8 @@ import { JsonPlaceholderService } from '../../services/json-placeholder.service'
   styleUrls: ['./list.page.scss'],
 })
 export class ListPage implements OnInit {
+  @ViewChild('list') list: IonList;
+
   users: any[] = [];
 
   constructor(
@@ -14,12 +17,29 @@ export class ListPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.getUsers();
+  }
+
+  private getUsers() {
     this.jsonPlaceholderService.getUsers().subscribe({
       next: (response) => {
         this.users = response;
       },
       error: (error) => console.error(error),
-    })
+    });
+  }
+
+  favorite(user: any) {
+    console.log('favorite', user);
+    this.list.closeSlidingItems();
+  }
+  share(user: any) {
+    console.log('share', user);
+    this.list.closeSlidingItems();
+  }
+  delete(user: any) {
+    console.log('delete', user);
+    this.list.closeSlidingItems();
   }
 
 }
