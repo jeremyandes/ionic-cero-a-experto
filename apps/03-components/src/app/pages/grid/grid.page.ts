@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grid.page.scss'],
 })
 export class GridPage implements OnInit {
+  date: Date = new Date();
 
   constructor() { }
 
