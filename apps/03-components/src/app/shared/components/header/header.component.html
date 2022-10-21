@@ -1,0 +1,8 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons *ngIf="hasBackButton" slot="start">
+      <ion-back-button text="Volver" defaultHref="/" color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title [color]="titleColor">{{ title | titlecase }}</ion-title>
+  </ion-toolbar>
+</ion-header>

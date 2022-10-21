@@ -4,19 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import { AlertPageRoutingModule } from './alert-routing.module';
 
-import { HomePage } from './home.page';
-import { SharedModule } from '../shared/shared.module';
+import { AlertPage } from './alert.page';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule,
+    AlertPageRoutingModule,
     SharedModule,
   ],
-  declarations: [HomePage]
+  declarations: [AlertPage]
 })
-export class HomePageModule { }
+export class AlertPageModule { }
