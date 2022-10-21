@@ -22,8 +22,4 @@ export class AppComponent implements OnInit {
       error: (error) => console.error(error),
     })
   }
-
-  closeMenu(): void {
-    this.menuController.close('default');
-  }
 }

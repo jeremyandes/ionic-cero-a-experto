@@ -6,11 +6,13 @@
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
-      <ion-list *ngFor="let item of menuItems">
-        <ion-item [routerLink]="item.routerLink" detail="true" (click)="closeMenu()">
-          <ion-icon slot="start" [name]="item.icon"></ion-icon>
-          {{ item.title }}
-        </ion-item>
+      <ion-list>
+        <ion-menu-toggle *ngFor="let item of menuItems">
+          <ion-item [routerLink]="item.routerLink" detail="true">
+            <ion-icon slot="start" [name]="item.icon"></ion-icon>
+            {{ item.title }}
+          </ion-item>
+        </ion-menu-toggle>
       </ion-list>
     </ion-content>
   </ion-menu>
