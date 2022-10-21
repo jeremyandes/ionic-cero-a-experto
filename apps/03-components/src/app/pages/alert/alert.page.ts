@@ -88,6 +88,7 @@ export class AlertPage implements OnInit {
           placeholder: 'Birthday',
           min: '1950-01-01',
           max: new Date().toISOString().split('T')[0],
+          value: new Date().toISOString().split('T')[0],
         },
         {
           name: 'info',

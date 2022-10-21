@@ -22,6 +22,11 @@ export class HomePage implements OnInit {
       title: 'Alert',
       routerLink: '/alert',
     },
+    {
+      icon: 'beaker-outline',
+      title: 'Avatar',
+      routerLink: '/avatar',
+    },
   ]
 
   constructor() { }
