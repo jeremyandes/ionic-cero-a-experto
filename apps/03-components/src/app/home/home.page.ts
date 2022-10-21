@@ -77,6 +77,11 @@ export class HomePage implements OnInit {
       title: 'List - Reorder',
       routerLink: '/list-reorder',
     },
+    {
+      icon: 'refresh-circle-outline',
+      title: 'Loading',
+      routerLink: '/loading',
+    },
   ]
 
   constructor() { }
