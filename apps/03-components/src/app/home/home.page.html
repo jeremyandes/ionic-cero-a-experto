@@ -1,0 +1,10 @@
+<app-header title="Components"></app-header>
+
+<ion-content>
+  <ion-list *ngFor="let component of components">
+    <ion-item [routerLink]="component.routerLink" detail="true">
+      <ion-icon slot="start" [name]="component.icon"></ion-icon>
+      {{ component.title }}
+    </ion-item>
+  </ion-list>
+</ion-content>
