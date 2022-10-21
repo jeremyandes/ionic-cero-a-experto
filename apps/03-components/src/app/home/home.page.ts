@@ -32,6 +32,11 @@ export class HomePage implements OnInit {
       title: 'Buttons',
       routerLink: '/buttons',
     },
+    {
+      icon: 'card-outline',
+      title: 'Cards',
+      routerLink: '/cards',
+    },
   ]
 
   constructor() { }
