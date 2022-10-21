@@ -1,4 +1,18 @@
-<app-header title="Components"></app-header>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="default"></ion-menu-button>
+    </ion-buttons>
+
+    <!-- <ion-buttons slot="start">
+      <ion-button (click)="showMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+
+    <ion-title color="dark">Components</ion-title>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content>
   <ion-list *ngFor="let component of components">

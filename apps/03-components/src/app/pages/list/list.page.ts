@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonList } from '@ionic/angular';
-import { JsonPlaceholderService } from '../../services/json-placeholder.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-list',
@@ -13,7 +13,7 @@ export class ListPage implements OnInit {
   users: any[] = [];
 
   constructor(
-    private jsonPlaceholderService: JsonPlaceholderService,
+    private dataService: DataService,
   ) { }
 
   ngOnInit() {
@@ -21,7 +21,7 @@ export class ListPage implements OnInit {
   }
 
   private getUsers() {
-    this.jsonPlaceholderService.getUsers().subscribe({
+    this.dataService.getUsers().subscribe({
       next: (response) => {
         this.users = response;
       },
