@@ -1,0 +1,41 @@
+<app-header title="DateTime" [hasBackButton]="true" titleColor="secondary"></app-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-list-header>
+      <ion-label>Personal information:</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Birthday</ion-label>
+      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="datetime" (ionChange)="dateChange($event)"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+
+
+
+    <ion-list-header>
+      <ion-label>Restrictions</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Min &amp; Max</ion-label>
+      <ion-datetime-button datetime="datetime_2"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="datetime_2" (ionChange)="dateChange($event)" [min]="currentDate.toISOString()" max="2022-12-31">
+          </ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

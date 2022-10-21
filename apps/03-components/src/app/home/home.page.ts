@@ -42,6 +42,11 @@ export class HomePage implements OnInit {
       title: 'Checkbox',
       routerLink: '/checkbox',
     },
+    {
+      icon: 'calendar-outline',
+      title: 'DateTime',
+      routerLink: '/date-time',
+    },
   ]
 
   constructor() { }
