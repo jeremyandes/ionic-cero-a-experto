@@ -37,6 +37,11 @@ export class HomePage implements OnInit {
       title: 'Cards',
       routerLink: '/cards',
     },
+    {
+      icon: 'checkmark-circle-outline',
+      title: 'Checkbox',
+      routerLink: '/checkbox',
+    },
   ]
 
   constructor() { }
