@@ -9,7 +9,7 @@ import { ActionSheetController } from '@ionic/angular';
 export class ActionSheetPage implements OnInit {
 
   constructor(
-    private actionSheetCtrl: ActionSheetController,
+    private actionSheetController: ActionSheetController,
   ) { }
 
   ngOnInit() {
@@ -20,7 +20,7 @@ export class ActionSheetPage implements OnInit {
   }
 
   async presentActionSheet() {
-    const actionSheet = await this.actionSheetCtrl.create({
+    const actionSheet = await this.actionSheetController.create({
       header: 'Action Sheet custom',
       subHeader: 'Tiene un subheader',
       buttons: [
