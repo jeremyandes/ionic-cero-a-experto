@@ -5,12 +5,21 @@
     </ion-buttons>
 
     <ion-title color="twitter">List Reorder</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="reorderDisabled=!reorderDisabled">
+        <ion-icon slot="icon-only"
+        [name]="!reorderDisabled ? 'close-outline' : 'options-outline'"
+        [color]="reorderDisabled ? 'success' : 'danger'"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
   <ion-list>
-    <ion-reorder-group disabled="false" (ionItemReorder)="reorder($event)">
+    <ion-reorder-group [disabled]="reorderDisabled" (ionItemReorder)="reorder($event)">
       <ion-item *ngFor="let character of characters">
         <ion-label>{{ character }}</ion-label>
         <ion-reorder slot="end"></ion-reorder>
