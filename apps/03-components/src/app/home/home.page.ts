@@ -52,6 +52,11 @@ export class HomePage implements OnInit {
       title: 'Fab',
       routerLink: '/fab',
     },
+    {
+      icon: 'grid-outline',
+      title: 'Grid System',
+      routerLink: '/grid',
+    },
   ]
 
   constructor() { }
