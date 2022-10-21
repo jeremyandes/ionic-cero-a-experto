@@ -1,6 +1,6 @@
 <app-header [title]="getControlValue('name') || 'Input Forms'" [hasBackButton]="true" titleColor="dark"></app-header>
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding" fullscreen>
   <ion-list>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <ion-list-header>
