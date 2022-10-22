@@ -7,6 +7,7 @@ import { DataService } from '../../services/data.service';
   styleUrls: ['./segment.page.scss'],
 })
 export class SegmentPage implements OnInit {
+  selectedSegment: string = '';
   superheroes: any[] = [];
 
   constructor(
@@ -17,13 +18,19 @@ export class SegmentPage implements OnInit {
     this.dataService.getSuperheroes().subscribe({
       next: (response) => {
         console.log(response);
-        this.superheroes = response;
+        this.sortHeroes(response);
       },
       error: (error) => console.error(error),
     })
   }
 
+  private sortHeroes(response: any[]) {
+    this.superheroes = [...response].sort((a: any, b: any) => a.superhero < b.superhero ? -1 : 1);
+  }
+
   segmentChanged(event: any) {
-    console.log(event);
+    const value = event.detail.value;
+    console.log('Selected segment:', value);
+    this.selectedSegment = value;
   }
 }

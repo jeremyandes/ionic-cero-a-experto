@@ -7,8 +7,8 @@
     <ion-title color="google">Segments</ion-title>
   </ion-toolbar>
 
-  <ion-segment value="All" (ionChange)="segmentChanged($event)">
-    <ion-segment-button value="All">
+  <ion-segment value="" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="">
       <ion-label>All</ion-label>
     </ion-segment-button>
     <ion-segment-button value="DC Comics">
@@ -23,7 +23,7 @@
 <ion-content class="ion-padding" fullscreen>
 
   <ion-list>
-    <ion-item *ngFor="let hero of superheroes">
+    <ion-item *ngFor="let hero of superheroes | filter:selectedSegment:'publisher'">
       <ion-label>
         <h2>{{ hero.superhero }} <small>{{ hero.alterego }}</small></h2>
         <p>{{ hero.first_appearance }}</p>
