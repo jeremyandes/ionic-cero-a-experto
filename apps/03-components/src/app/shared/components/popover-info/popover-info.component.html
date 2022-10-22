@@ -1,5 +1,5 @@
 <ion-list>
-  <ion-item *ngFor="let item of [].constructor(50); let i = index;">
+  <ion-item *ngFor="let item of [].constructor(7); let i = index;" (click)="onClick(i + 1)">
     <ion-label>Item {{ i + 1 }}</ion-label>
   </ion-item>
 </ion-list>

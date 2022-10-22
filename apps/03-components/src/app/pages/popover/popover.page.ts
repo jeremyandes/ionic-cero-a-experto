@@ -24,7 +24,10 @@ export class PopoverPage implements OnInit {
       backdropDismiss: false,
     })
 
-    return await popover.present()
+    await popover.present();
+
+    const { data } = await popover.onWillDismiss();
+    console.log(data);
   }
 
 }
