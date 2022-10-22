@@ -68,5 +68,10 @@
         "icon": "refresh-circle-outline",
         "title": "Loading",
         "routerLink": "/loading"
+    },
+    {
+        "icon": "phone-portrait-outline",
+        "title": "Modal",
+        "routerLink": "/modal"
     }
 ]

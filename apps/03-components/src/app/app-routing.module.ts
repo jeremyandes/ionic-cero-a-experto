@@ -29,43 +29,47 @@ const routes: Routes = [
   },
   {
     path: 'cards',
-    loadChildren: () => import('./pages/cards/cards.module').then( m => m.CardsPageModule)
+    loadChildren: () => import('./pages/cards/cards.module').then(m => m.CardsPageModule)
   },
   {
     path: 'checkbox',
-    loadChildren: () => import('./pages/checkbox/checkbox.module').then( m => m.CheckboxPageModule)
+    loadChildren: () => import('./pages/checkbox/checkbox.module').then(m => m.CheckboxPageModule)
   },
   {
     path: 'date-time',
-    loadChildren: () => import('./pages/date-time/date-time.module').then( m => m.DateTimePageModule)
+    loadChildren: () => import('./pages/date-time/date-time.module').then(m => m.DateTimePageModule)
   },
   {
     path: 'fab',
-    loadChildren: () => import('./pages/fab/fab.module').then( m => m.FabPageModule)
+    loadChildren: () => import('./pages/fab/fab.module').then(m => m.FabPageModule)
   },
   {
     path: 'grid',
-    loadChildren: () => import('./pages/grid/grid.module').then( m => m.GridPageModule)
+    loadChildren: () => import('./pages/grid/grid.module').then(m => m.GridPageModule)
   },
   {
     path: 'infinite-scroll',
-    loadChildren: () => import('./pages/infinite-scroll/infinite-scroll.module').then( m => m.InfiniteScrollPageModule)
+    loadChildren: () => import('./pages/infinite-scroll/infinite-scroll.module').then(m => m.InfiniteScrollPageModule)
   },
   {
     path: 'inputs',
-    loadChildren: () => import('./pages/inputs/inputs.module').then( m => m.InputsPageModule)
+    loadChildren: () => import('./pages/inputs/inputs.module').then(m => m.InputsPageModule)
   },
   {
     path: 'list',
-    loadChildren: () => import('./pages/list/list.module').then( m => m.ListPageModule)
+    loadChildren: () => import('./pages/list/list.module').then(m => m.ListPageModule)
   },
   {
     path: 'list-reorder',
-    loadChildren: () => import('./pages/list-reorder/list-reorder.module').then( m => m.ListReorderPageModule)
+    loadChildren: () => import('./pages/list-reorder/list-reorder.module').then(m => m.ListReorderPageModule)
   },
   {
     path: 'loading',
-    loadChildren: () => import('./pages/loading/loading.module').then( m => m.LoadingPageModule)
+    loadChildren: () => import('./pages/loading/loading.module').then(m => m.LoadingPageModule)
+  },
+  {
+    path: 'modal',
+    loadChildren: () => import('./pages/modal/modal.module').then(m => m.ModalPageModule)
   },
 ];
 
