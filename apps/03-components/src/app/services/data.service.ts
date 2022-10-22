@@ -17,11 +17,15 @@ export class DataService {
     return this.http.get<any[]>(`${this.jsonPlaceholderURL}/users`);
   }
 
+  public getAlbums(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.jsonPlaceholderURL}/albums`);
+  }
+
   public getMenuOptions(): Observable<MenuItem[]> {
     return this.http.get<MenuItem[]>(`assets/data/menu-options.json`);
   }
 
-  public getAlbums(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.jsonPlaceholderURL}/albums`);
+  public getSuperheroes(): Observable<any[]> {
+    return this.http.get<any[]>(`assets/data/superheroes.json`);
   }
 }

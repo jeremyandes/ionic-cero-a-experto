@@ -93,5 +93,10 @@
         "icon": "search-outline",
         "title": "Search",
         "routerLink": "/search"
+    },
+    {
+        "icon": "copy-outline",
+        "title": "Segment",
+        "routerLink": "/segment"
     }
 ]
