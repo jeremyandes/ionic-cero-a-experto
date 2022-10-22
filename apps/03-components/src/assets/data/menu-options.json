@@ -88,5 +88,10 @@
         "icon": "arrow-down-circle-outline",
         "title": "Refresher",
         "routerLink": "/refresher"
+    },
+    {
+        "icon": "search-outline",
+        "title": "Search",
+        "routerLink": "/search"
     }
 ]

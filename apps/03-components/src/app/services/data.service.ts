@@ -13,11 +13,15 @@ export class DataService {
     private http: HttpClient,
   ) { }
 
-  public getUsers(): Observable<any> {
-    return this.http.get(`${this.jsonPlaceholderURL}/users`);
+  public getUsers(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.jsonPlaceholderURL}/users`);
   }
 
   public getMenuOptions(): Observable<MenuItem[]> {
     return this.http.get<MenuItem[]>(`assets/data/menu-options.json`);
+  }
+
+  public getAlbums(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.jsonPlaceholderURL}/albums`);
   }
 }

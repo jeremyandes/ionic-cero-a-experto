@@ -1,0 +1,21 @@
+<ion-header class="ion-no-border" translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="default"></ion-menu-button>
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="dark">Search</ion-title>
+  </ion-toolbar>
+
+  <ion-searchbar placeholder="Search something" animated inputmode="text" (ionChange)="onSearchChange($event)"
+    debounce="500">
+  </ion-searchbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let album of albums">
+      <ion-label>{{ album.title }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
