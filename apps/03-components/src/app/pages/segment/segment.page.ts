@@ -15,13 +15,14 @@ export class SegmentPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.dataService.getSuperheroes().subscribe({
-      next: (response) => {
-        console.log(response);
-        this.sortHeroes(response);
-      },
-      error: (error) => console.error(error),
-    })
+    this.dataService.getSuperheroes()
+      .subscribe({
+        next: (response) => {
+          console.log(response);
+          this.sortHeroes(response);
+        },
+        error: (error) => console.error(error),
+      })
   }
 
   private sortHeroes(response: any[]) {
