@@ -78,5 +78,10 @@
         "icon": "tablet-portrait-outline",
         "title": "Popover",
         "routerLink": "/popover"
+    },
+    {
+        "icon": "code-working-outline",
+        "title": "Progress Range",
+        "routerLink": "/progress-range"
     }
 ]

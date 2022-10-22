@@ -75,6 +75,10 @@ const routes: Routes = [
     path: 'popover',
     loadChildren: () => import('./pages/popover/popover.module').then( m => m.PopoverPageModule)
   },
+  {
+    path: 'progress-range',
+    loadChildren: () => import('./pages/progress-range/progress-range.module').then( m => m.ProgressRangePageModule)
+  },
 ];
 
 @NgModule({
