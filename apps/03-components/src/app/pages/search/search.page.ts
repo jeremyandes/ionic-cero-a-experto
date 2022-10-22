@@ -8,6 +8,7 @@ import { DataService } from '../../services/data.service';
 })
 export class SearchPage implements OnInit {
   albums: any[] = [];
+  filterValue: string = '';
 
   constructor(
     private dataService: DataService,
@@ -24,13 +25,8 @@ export class SearchPage implements OnInit {
   }
 
   onSearchChange(event: any) {
-    this.dataService.getAlbums().subscribe({
-      next: (response) => {
-        console.log(response);
-        this.albums = response;
-      },
-      error: (error) => console.error(error),
-    })
+    console.log(event);
+    this.filterValue = event.detail.value;
   }
 
 }
