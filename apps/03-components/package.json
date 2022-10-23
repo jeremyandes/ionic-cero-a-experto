@@ -1,8 +1,8 @@
 {
-  "name": "components",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "name": "Components App",
+  "version": "1.0.5",
+  "author": "Jeremy Andes",
+  "homepage": "https://github.com/jeremyandes/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
