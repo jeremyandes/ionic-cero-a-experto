@@ -1,21 +1,23 @@
 <ion-app>
-  <ion-menu type="push" menuId="default" contentId="main-content">
-    <ion-header class="ion-no-border" translucent>
-      <ion-toolbar>
-        <ion-title>Menu Content</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding" fullscreen>
-      <ion-list>
-        <ion-menu-toggle *ngFor="let item of menuItems">
-          <ion-item [routerLink]="item.routerLink" detail="true">
-            <ion-icon slot="start" [name]="item.icon"></ion-icon>
-            {{ item.title }}
-          </ion-item>
-        </ion-menu-toggle>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
+  <ion-split-pane when="md" contentId="main-content">
+    <ion-menu type="push" menuId="default" contentId="main-content" fixed>
+      <ion-header class="ion-no-border" translucent>
+        <ion-toolbar>
+          <ion-title>Menu Content</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding" fullscreen>
+        <ion-list>
+          <ion-menu-toggle *ngFor="let item of menuItems" autoHide="false">
+            <ion-item [routerLink]="item.routerLink" detail="true">
+              <ion-icon slot="start" [name]="item.icon"></ion-icon>
+              {{ item.title }}
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
 
-  <ion-router-outlet id="main-content"></ion-router-outlet>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>

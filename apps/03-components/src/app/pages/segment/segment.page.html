@@ -1,4 +1,4 @@
-<ion-header class="ion-no-border" translucent>
+<ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button menu="default"></ion-menu-button>
@@ -20,7 +20,7 @@
   </ion-segment>
 </ion-header>
 
-<ion-content class="ion-padding" fullscreen>
+<ion-content class="ion-padding">
 
   <ion-list *ngIf="superheroes.length > 0" class="animate__animated animate__fadeIn animate__faster">
     <ion-item *ngFor="let hero of superheroes | filter:selectedSegment:'publisher'">

@@ -103,5 +103,10 @@
         "icon": "albums-outline",
         "title": "Slides",
         "routerLink": "/slides"
+    },
+    {
+        "icon": "cog-outline",
+        "title": "Tabs",
+        "routerLink": "/tabs"
     }
 ]
