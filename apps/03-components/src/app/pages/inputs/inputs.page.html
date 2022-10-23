@@ -1,0 +1,40 @@
+<app-header [title]="getControlValue('name') || 'Input Forms'" [hasBackButton]="true" titleColor="dark"></app-header>
+
+<ion-content class="ion-padding" fullscreen>
+  <ion-list>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <ion-list-header>
+        <ion-label>Form Valid: {{ form.valid }}</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Name</ion-label>
+        <ion-input formControlName="name" type="text" placeholder="Write your name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Last Name</ion-label>
+        <ion-input formControlName="lastName" type="text" placeholder="Write your last name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input formControlName="email" type="email" placeholder="Write your email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Password</ion-label>
+        <ion-input formControlName="password" type="password" placeholder="Write your password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Phone</ion-label>
+        <ion-input formControlName="number" type="number" placeholder="Write your number"></ion-input>
+      </ion-item>
+
+      <ion-button [disabled]="form.invalid" type="submit" expand="block" class="ion-margin-top">
+        Save information
+      </ion-button>
+    </form>
+  </ion-list>
+</ion-content>

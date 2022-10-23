@@ -1,5 +1,17 @@
 <app-header title="Alert" [hasBackButton]="true" titleColor="success"></app-header>
 
-<ion-content>
+<ion-content class="ion-padding" fullscreen>
+
+    <ion-button (click)="presentAlert()" expand="block">
+        Alert
+    </ion-button>
+
+    <ion-button (click)="presentAlertMultipleButtons()" expand="block" color="secondary">
+        Alert Multiple Buttons
+    </ion-button>
+
+    <ion-button (click)="presentAlertInputs()" expand="block" color="tertiary">
+        Alert Inputs
+    </ion-button>
 
 </ion-content>

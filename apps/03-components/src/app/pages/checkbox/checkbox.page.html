@@ -1,0 +1,12 @@
+<app-header title="Checkboxes" [hasBackButton]="true" titleColor="primary"></app-header>
+
+<ion-content class="ion-padding" fullscreen>
+  <ion-item *ngFor="let item of checkboxes" (click)="onClick(item)">
+    <ion-checkbox [color]="item.color" slot="start" [(ngModel)]="item.selected"></ion-checkbox>
+    <ion-label>{{ item.color | titlecase }}</ion-label>
+  </ion-item>
+
+  <ion-button (click)="submit()" expand="block" class="ion-margin-top">
+    Submit
+  </ion-button>
+</ion-content>

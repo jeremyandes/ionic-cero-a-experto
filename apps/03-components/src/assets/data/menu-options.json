@@ -1,0 +1,117 @@
+[
+    {
+        "icon": "american-football-outline",
+        "title": "Action Sheet",
+        "routerLink": "/action-sheet"
+    },
+    {
+        "icon": "logo-apple-appstore",
+        "title": "Alert",
+        "routerLink": "/alert"
+    },
+    {
+        "icon": "beaker-outline",
+        "title": "Avatar",
+        "routerLink": "/avatar"
+    },
+    {
+        "icon": "radio-button-off-outline",
+        "title": "Buttons",
+        "routerLink": "/buttons"
+    },
+    {
+        "icon": "card-outline",
+        "title": "Cards",
+        "routerLink": "/cards"
+    },
+    {
+        "icon": "checkmark-circle-outline",
+        "title": "Checkbox",
+        "routerLink": "/checkbox"
+    },
+    {
+        "icon": "calendar-outline",
+        "title": "DateTime",
+        "routerLink": "/date-time"
+    },
+    {
+        "icon": "car-outline",
+        "title": "Fab",
+        "routerLink": "/fab"
+    },
+    {
+        "icon": "grid-outline",
+        "title": "Grid System",
+        "routerLink": "/grid"
+    },
+    {
+        "icon": "infinite-outline",
+        "title": "Infinite Scroll",
+        "routerLink": "/infinite-scroll"
+    },
+    {
+        "icon": "hammer-outline",
+        "title": "Input Forms",
+        "routerLink": "/inputs"
+    },
+    {
+        "icon": "list-outline",
+        "title": "List",
+        "routerLink": "/list"
+    },
+    {
+        "icon": "reorder-three-outline",
+        "title": "List - Reorder",
+        "routerLink": "/list-reorder"
+    },
+    {
+        "icon": "refresh-circle-outline",
+        "title": "Loading",
+        "routerLink": "/loading"
+    },
+    {
+        "icon": "phone-portrait-outline",
+        "title": "Modal",
+        "routerLink": "/modal"
+    },
+    {
+        "icon": "tablet-portrait-outline",
+        "title": "Popover",
+        "routerLink": "/popover"
+    },
+    {
+        "icon": "code-working-outline",
+        "title": "Progress Range",
+        "routerLink": "/progress-range"
+    },
+    {
+        "icon": "arrow-down-circle-outline",
+        "title": "Refresher",
+        "routerLink": "/refresher"
+    },
+    {
+        "icon": "search-outline",
+        "title": "Search",
+        "routerLink": "/search"
+    },
+    {
+        "icon": "copy-outline",
+        "title": "Segment",
+        "routerLink": "/segment"
+    },
+    {
+        "icon": "albums-outline",
+        "title": "Slides",
+        "routerLink": "/slides"
+    },
+    {
+        "icon": "cog-outline",
+        "title": "Tabs",
+        "routerLink": "/tabs"
+    },
+    {
+        "icon": "pricetag-outline",
+        "title": "Toast",
+        "routerLink": "/toast"
+    }
+]
