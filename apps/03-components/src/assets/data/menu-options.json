@@ -108,5 +108,10 @@
         "icon": "cog-outline",
         "title": "Tabs",
         "routerLink": "/tabs"
+    },
+    {
+        "icon": "pricetag-outline",
+        "title": "Toast",
+        "routerLink": "/toast"
     }
 ]
