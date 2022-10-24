@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { Article } from '../../../interfaces/news-api.interface';
+import { StorageService } from '../../../services/storage.service';
 import { InAppBrowser } from '@awesome-cordova-plugins/in-app-browser/ngx';
-import { ActionSheetButton, ActionSheetController, Platform } from '@ionic/angular';
 import { SocialSharing } from '@awesome-cordova-plugins/social-sharing/ngx';
+import { ActionSheetButton, ActionSheetController, Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-article',
@@ -14,10 +15,11 @@ export class ArticleComponent {
   @Input() index: number;
 
   constructor(
-    private inAppBrowser: InAppBrowser,
     private platform: Platform,
-    private actionSheetController: ActionSheetController,
+    private inAppBrowser: InAppBrowser,
     private socialSharing: SocialSharing,
+    private storageService: StorageService,
+    private actionSheetController: ActionSheetController,
   ) { }
 
   openArticle(): void {
@@ -76,6 +78,7 @@ export class ArticleComponent {
 
   toggleFavorite(): void {
     console.log('Favorite toggle');
+    this.storageService.saveRemoveArticle(this.article);
   }
 }
 
