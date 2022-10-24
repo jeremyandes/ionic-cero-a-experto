@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../../services/news.service';
+import { Article } from '../../interfaces/news-api.interface';
 
 @Component({
   selector: 'app-tab1',
@@ -7,7 +8,7 @@ import { NewsService } from '../../services/news.service';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit {
-  topHeadlines: any[] = [];
+  topHeadlines: Article[];
 
   constructor(
     private newsService: NewsService,
