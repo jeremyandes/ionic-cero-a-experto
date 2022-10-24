@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { TopHeadlinesMock } from '../utils/mock-data';
-import { NewsResponse, Article } from '../interfaces/news-api.interface';
+import { Article } from '../interfaces/news-api.interface';
 import { delay, map } from 'rxjs/operators'
 
 @Injectable({

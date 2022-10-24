@@ -8,7 +8,7 @@ import { Article } from '../../interfaces/news-api.interface';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit {
-  topHeadlines: Article[];
+  topHeadlines: Article[] = [];
 
   constructor(
     private newsService: NewsService,
