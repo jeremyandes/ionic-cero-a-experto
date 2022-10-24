@@ -8,6 +8,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InAppBrowser } from '@awesome-cordova-plugins/in-app-browser/ngx';
+import { SocialSharing } from '@awesome-cordova-plugins/social-sharing/ngx';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { InAppBrowser } from '@awesome-cordova-plugins/in-app-browser/ngx';
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     InAppBrowser,
+    SocialSharing,
   ],
   bootstrap: [
     AppComponent
