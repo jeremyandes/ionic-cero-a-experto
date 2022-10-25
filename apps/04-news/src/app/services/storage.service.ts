@@ -16,9 +16,12 @@ export class StorageService {
     this.init();
   }
 
+  public get localArticles(): Article[] { return [...this._localArticles]; }
+
   async init(): Promise<void> {
     const storage = await this.storage.create();
     this._storage = storage;
+    this.loadFavorites();
   }
 
   async saveRemoveArticle(article: Article): Promise<void> {
@@ -30,6 +33,16 @@ export class StorageService {
       this._localArticles = [article, ...this._localArticles];
     }
 
-    this._storage.set('articles', this._localArticles);
+    await this._storage.set('articles', this._localArticles);
+  }
+
+  async loadFavorites(): Promise<Article[]> {
+    try {
+      const articles = await this._storage.get('articles');
+      this._localArticles = articles || [];
+      return this._localArticles;
+    } catch (error) {
+      console.error(error);
+    }
   }
 }
