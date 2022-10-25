@@ -33,10 +33,13 @@ export class ArticleComponent {
   }
 
   async openMenu(): Promise<void> {
+    const isFavorite = this.storageService.isFavorite(this.article);
+
     const buttons: ActionSheetButton[] = [
       {
-        text: 'Favorite',
-        icon: 'heart-outline',
+        text: !isFavorite ? 'Favorite' : 'Remove Favorite',
+        icon: !isFavorite ? 'heart-outline' : 'heart',
+
         handler: () => this.toggleFavorite(),
       },
       {

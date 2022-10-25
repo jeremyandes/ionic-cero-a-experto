@@ -45,4 +45,8 @@ export class StorageService {
       console.error(error);
     }
   }
+
+  isFavorite(article: Article): boolean {
+    return this._localArticles.some(localArticle => localArticle.title === article.title);
+  }
 }
